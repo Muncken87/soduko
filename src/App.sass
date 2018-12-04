@@ -1,0 +1,54 @@
+@import './styles/Main.sass'
+
+* 
+  box-sizing: border-box
+
+body
+  font-family: Helvetica, Arial, sans-serif
+  margin: 0
+  padding: 0
+  background: lightcoral
+
+.container
+  text-align: center
+  padding: 25px
+  max-width: 377px
+  margin: 0 auto
+.inner-box-flex
+  border: 1px solid black
+  margin: 5px
+  position: relative
+  &:before, &:after
+    height: 100%
+    content: ''
+    position: absolute
+    width: 1px
+    background: black
+    top: 0
+  &:before
+    left: calc(317px / 3)
+  &:after
+    left: calc(317px / 3 * 2)
+  input
+    max-width: 35px
+    height: 35px
+    text-align: center
+    margin: 0
+    padding: 0
+    outline: none
+    border: 1px solid #f4f4f4
+    &:focus
+      border-color: black
+      border-width: 1px
+    .right-border
+      border-right: 1px solid black
+    &:last-of-type
+      border-bottom: none
+  div
+    display: inline-flex
+  .bottom-border
+    border-bottom: 1px solid black
+  &:last-of-type
+    border-bottom: none
+.helper-text
+  color: lighten(#f08080, 25)
